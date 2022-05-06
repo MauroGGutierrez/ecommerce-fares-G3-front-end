@@ -10,11 +10,10 @@ import {
 } from "@chakra-ui/react";
 
 
-const ContentProduct = (props) => {
+const ContentProduct = ({id,title,imgCards,description,price}) => {
   return (
     <Center py={12}>
       <Box
-        key={props.id}
         role={"group"}
         p={7}
         maxW={"330px"}
@@ -24,44 +23,47 @@ const ContentProduct = (props) => {
         bgGradient="linear(to-t, #adb5bd,#e9ecef)"
         boxShadow={"dark-lg"}
         transition="all 500ms ease"
+        _hover={{ transform: "scale(1.10)", transition: "all 1000ms ease" }}
       >
         <Box
           rounded={"lg"}
-          height={"230px"}
+          height={"260px"}
           boxShadow={"2xl"}
-          _hover={{ transform: "scale(1.10)", transition: "all 1000ms ease" }}
         >
           <Image
             rounded={"lg"}
-            height={250}
-            width={282}
+            height={"100%"}
+            width={"100%"}
             objectFit={"cover"}
-            src={props.imgCards}
+            src={imgCards}
           />
         </Box>
-        <Stack pt={10} align={"center"}>
-          <Text
+        <Flex pt={10} align={"center"} flexDirection={"column"} gap={"0.5rem"}>
+          <Heading
             fontSize={"2xl"}
             fontWeight={600}
             as="bold"
             color={"#black"}
             lineHeight={"26px"}
             mt={2}
+            mb={"0.5rem"}
             fontFamily={("sans-serif", "Rajdhani")}
-            mb={"2rem"}
           >
-            {props.title}
-          </Text>
-          <Heading
+            {title}
+          </Heading>
+          <Text
             fontSize={"sm"}
             fontFamily={("sans-serif", "Poppins")}
             fontWeight={300}
             color={"black"}
-            mb={"3rem"}
-
+            lineHeight={"18px"}
+            width="100%"
+            overflow="hidden"
+            textOverflow="ellipsis"
+            whiteSpace="nowrap"
           >
-            {props.description}
-          </Heading>
+            {description}
+          </Text>
           <Flex direction={"row"} align={"center"}>
             <Flex pr={4} align={"center"}>
               <Text
@@ -79,7 +81,7 @@ const ContentProduct = (props) => {
                 color={"black"}
                 fontFamily={("sans-serif", "Poppins")}
               >
-                ${props.price}
+                ${price}
               </Text>
             </Flex>
           </Flex>
@@ -105,7 +107,7 @@ const ContentProduct = (props) => {
               BUY NOW
             </Text>
           </Stack>
-        </Stack>
+        </Flex>
       </Box>
     </Center>
   );
