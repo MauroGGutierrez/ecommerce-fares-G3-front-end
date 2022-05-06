@@ -9,8 +9,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 
-
-const ContentProduct = ({id,title,imgCards,description,price}) => {
+const ContentProduct = ({ title, imgCards, description, price }) => {
   return (
     <Center py={12}>
       <Box
@@ -18,18 +17,14 @@ const ContentProduct = ({id,title,imgCards,description,price}) => {
         p={7}
         maxW={"330px"}
         w={"full"}
-        h={"42.25rem"}
+        // h={"42.25rem"}
         overflow={"hidden"}
         bgGradient="linear(to-t, #adb5bd,#e9ecef)"
         boxShadow={"dark-lg"}
         transition="all 500ms ease"
-        _hover={{ transform: "scale(1.10)", transition: "all 1000ms ease" }}
+        _hover={{ transform: "scale(1.05)", transition: "all 1000ms ease" }}
       >
-        <Box
-          rounded={"lg"}
-          height={"260px"}
-          boxShadow={"2xl"}
-        >
+        <Box rounded={"lg"} height={"260px"} boxShadow={"2xl"}>
           <Image
             rounded={"lg"}
             height={"100%"}
