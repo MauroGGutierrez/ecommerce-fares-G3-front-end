@@ -12,7 +12,7 @@ const ProductCards = () => {
       >
         {contentCards.map((cards) => (
           <ContentProduct
-            id={cards.id}
+            key={cards.id}
             title={cards.title}
             description={cards.description}
             price={cards.price}
