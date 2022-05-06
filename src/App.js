@@ -1,5 +1,5 @@
 import {} from "react-dom";
-import ProductCards from "./model/ProductCards";
+import ProductCards from "./pages/ProductCards";
 
 function App() {
   return (
