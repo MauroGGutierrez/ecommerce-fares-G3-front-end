@@ -37,7 +37,7 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
           <Heading
             fontSize={"2xl"}
             fontWeight={600}
-            as="bold"
+            // as="bold"
             color={"black"}
             lineHeight={"26px"}
             h="4.7rem"

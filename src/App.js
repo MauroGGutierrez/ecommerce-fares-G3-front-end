@@ -1,13 +1,16 @@
-import {} from "react-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CreateProduct from "./pages/CreateProduct";
 import ProductCards from "./pages/ProductCards";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <ProductCards />
-      {/* <AppRoutes/> */}
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<ProductCards />} />
+        <Route path="/createProduct" element={<CreateProduct />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
