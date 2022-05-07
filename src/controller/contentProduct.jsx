@@ -9,8 +9,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 
-
-const ContentProduct = ({id,title,imgCards,description,price}) => {
+const ContentProduct = ({ title, imgCards, description, price }) => {
   return (
     <Center py={12}>
       <Box
@@ -25,11 +24,7 @@ const ContentProduct = ({id,title,imgCards,description,price}) => {
         transition="all 500ms ease"
         _hover={{ transform: "scale(1.04)", transition: "all 1000ms ease", border:"1px solid red" }}
       >
-        <Box
-          rounded={"lg"}
-          height={"260px"}
-          boxShadow={"2xl"}
-        >
+        <Box rounded={"lg"} height={"260px"} boxShadow={"2xl"}>
           <Image
             rounded={"lg"}
             height={"100%"}
