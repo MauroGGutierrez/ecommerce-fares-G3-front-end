@@ -18,12 +18,12 @@ const ContentProduct = ({id,title,imgCards,description,price}) => {
         p={7}
         maxW={"330px"}
         w={"full"}
-        h={"42.25rem"}
+        h={"36.25rem"}
         overflow={"hidden"}
         bgGradient="linear(to-t, #adb5bd,#e9ecef)"
         boxShadow={"dark-lg"}
         transition="all 500ms ease"
-        _hover={{ transform: "scale(1.10)", transition: "all 1000ms ease" }}
+        _hover={{ transform: "scale(1.04)", transition: "all 1000ms ease", border:"1px solid red" }}
       >
         <Box
           rounded={"lg"}
@@ -38,16 +38,17 @@ const ContentProduct = ({id,title,imgCards,description,price}) => {
             src={imgCards}
           />
         </Box>
-        <Flex pt={10} align={"center"} flexDirection={"column"} gap={"0.5rem"}>
+        <Flex mt={8} align={"center"} flexDirection={"column"} gap={"0.6rem"}>
           <Heading
             fontSize={"2xl"}
             fontWeight={600}
             as="bold"
-            color={"#black"}
+            color={"black"}
             lineHeight={"26px"}
-            mt={2}
-            mb={"0.5rem"}
+            h="4.7rem"
             fontFamily={("sans-serif", "Rajdhani")}
+            overflow="hidden"
+
           >
             {title}
           </Heading>

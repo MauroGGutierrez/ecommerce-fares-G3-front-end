@@ -3,7 +3,7 @@ export const contentCards = [
     id: 1,
     title: "GABINETE ATX IC3 S17-5 RED 6 COOLERS GAMER NUEVA",
     description:
-      "El nuevo gabinete gamer con triple Cooler Frontal de iluminación roja y ventana lateral para mantener tus componentes refrigerados y a la vista. El Magnum Tech MT-435R negro con lateral transparente de acrílico, es un gabinete gamer que posee un precio accesible",
+      "Gabinete gamer con triple Cooler Frontal de iluminación roja y ventana lateral para mantener tus componentes refrigerados y a la vista. El Magnum Tech MT-435R negro con lateral transparente de acrílico, es un gabinete gamer que posee un precio accesible",
     price: "80.000",
     IMG: "https://imagenes.compufull.com/thumb/im_0_0_0_700x700_11548_1/GABINETE_GAMER_IC3_S175_RED_VIDRIO_LATERAL_6_COOLERS_LED20210218101958.jpg",
   },
@@ -30,5 +30,14 @@ export const contentCards = [
       "GABINETE ATX IC3 ADVENTURE EDITION ICE 1 COOLER RGB COOLER FAN INCLUIDO: x1 RGB 120 TRASERO LATERAL: VIDRIO TEMPLADO",
     price: "6.599",
     IMG: "https://www.armytech.com.ar/Image/0/500_500-IC3_1.jpeg",
+  },
+  {
+    id: 5,
+    title:
+      "GABINETE ATX IC3 S17-5 RED 6 COOLERS GAMER NUEVA SUPER IPER MEGA NUEVA NO PUEDE SERRRRRR",
+    description:
+      "Gabinete gamer con triple Cooler Frontal de iluminación roja y ventana lateral para mantener tus componentes refrigerados y a la vista. El Magnum Tech MT-435R negro con lateral transparente de acrílico, es un gabinete gamer que posee un precio accesible",
+    price: "80.000",
+    IMG: "https://imagenes.compufull.com/thumb/im_0_0_0_700x700_11548_1/GABINETE_GAMER_IC3_S175_RED_VIDRIO_LATERAL_6_COOLERS_LED20210218101958.jpg",
   },
 ];
