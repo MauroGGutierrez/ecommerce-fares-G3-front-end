@@ -8,7 +8,7 @@ const ProductCards = () => {
     <Container maxW={"90%"}>
       <Grid
         gridTemplateColumns="repeat(auto-fill, minmax(300px,1fr))"
-        gap="1rem"
+        gap="1.9rem"
       >
         {contentCards.map((cards) => (
           <ContentProduct
