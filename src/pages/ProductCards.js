@@ -1,6 +1,6 @@
 import { Container, Grid } from "@chakra-ui/react";
 import React from "react";
-import ContentProduct from "../controller/contentProduct";
+import ContentProduct from "../components/contentProduct";
 import { contentCards } from "../data/contentCards";
 
 const ProductCards = () => {
