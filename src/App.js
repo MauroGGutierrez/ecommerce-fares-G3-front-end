@@ -1,11 +1,10 @@
 import {} from "react-dom";
-import ProductCards from "./pages/ProductCards";
+import AppRouter from "./Routes/AppRouter";
 
 function App() {
   return (
     <>
-      <ProductCards />
-      {/* <AppRoutes/> */}
+      <AppRouter />
     </>
   );
 }
