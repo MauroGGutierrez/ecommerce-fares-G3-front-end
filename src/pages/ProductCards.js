@@ -5,10 +5,10 @@ import { contentCards } from "../data/contentCards";
 
 const ProductCards = () => {
   return (
-    <Container maxW={"90%"}>
+    <Container p="0" m="0 auto" maxW={"90%"}>
       <Grid
-        gridTemplateColumns="repeat(auto-fill, minmax(300px,1fr))"
-        gap="1.9rem"
+        gridTemplateColumns="repeat(auto-fill, minmax(250px,1fr))"
+        gap="2.9rem"
       >
         {contentCards.map((cards) => (
           <ContentProduct

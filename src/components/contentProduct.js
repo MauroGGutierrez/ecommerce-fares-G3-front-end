@@ -4,223 +4,115 @@ import { BsFillCartPlusFill, BsFillCartCheckFill } from "react-icons/bs";
 import { MdFavorite } from "react-icons/md";
 
 const ContentProduct = ({ title, imgCards, description, price }) => {
-  const [count, setCount] = useState(0);
-  const [like, setLike] = useState(false);
-  const [cart, setCart] = useState(false);
+  const [state, setState] = useState({ like: false, cart: false });
 
-  const handleClick = () => {
-    setCount(count + 1);
-  };
-
-  const subtractClick = () => {
-    setCount(count - 1);
-  };
-
-  const toggleLike = () => {
-    setLike(!like);
-  };
-  const toggleCart = () => {
-    setCart(!cart);
+  const textstyle = {
+    padding: "3px 10px",
+    fontWeight: 600,
+    fontFamily: "Rajdhani",
+    borderBottomLeftRadius: "5px",
+    borderBottomRightRadius: "5px",
   };
 
   return (
-    <Box py={12}>
+    <Box m="0 auto">
       <Box
-        role={"group"}
-        p={7}
-        maxW={"330px"}
-        w={"full"}
-        h={"36.25rem"}
-        overflow={"hidden"}
-        bgGradient="linear(to-t, #adb5bd,#e9ecef)"
-        boxShadow={"dark-lg"}
+        role="group"
+        maxW={["220px", "280px", "330px", "330px"]}
         transition="all 500ms ease"
+        border="1px solid gray"
         _hover={{
           transform: "scale(1.04)",
-          transition: "all 1000ms ease",
-          border: "1px solid red",
+          transition: "all 500ms ease",
+          boxShadow: "2px 2px 7px 1px gray",
         }}
       >
-        <Flex mt={"-1.8rem"} mb={"1rem"} ml={"-1rem"}>
-          <Box>
-            <Text
-              bg="#d90429"
-              p={"3px 10px"}
-              color={"white"}
-              fontWeight={600}
-              fontFamily={("sans-serif", "Rajdhani")}
-              borderBottomLeftRadius={"5px"}
-              borderBottomRightRadius={"5px"}
-            >
-              Stock Disponible
-            </Text>
-          </Box>
-          <Box>
-            <Text
-              bg="#0096c7"
-              p={"3px 10px"}
-              color={"white"}
-              fontWeight={600}
-              fontFamily={("sans-serif", "Rajdhani")}
-              borderBottomLeftRadius={"5px"}
-              borderBottomRightRadius={"5px"}
-            >
-              Oferta
-            </Text>
-          </Box>
+        <Flex gap={1}>
+          <Text bg="#d90429" color="white" style={textstyle}>
+            Stock Disponible
+          </Text>
+          <Text bg="#0096c7" color="white" style={textstyle}>
+            Oferta
+          </Text>
         </Flex>
-        <Flex ml={"14.6rem"} mb={"1rem"} mt={"-2.5rem"}>
-          <Box onClick={toggleLike} cursor={"pointer"} fontSize={"1.7rem"}>
-            {like ? (
-              <Box transition="all 1000ms ease">
-                <MdFavorite color={"red"} />
-              </Box>
-            ) : (
-              <Box
-                _hover={{
-                  transform: "scale(1.13)",
-                  transition: "all 1000ms ease",
-                }}
-              >
-                <MdFavorite color={"gray"} />
-              </Box>
-            )}
-          </Box>
-        </Flex>
-        <Box rounded={"lg"} height={"260px"} boxShadow={"2xl"}>
-          <Image
-            rounded={"lg"}
-            height={"100%"}
-            width={"100%"}
-            objectFit={"cover"}
-            src={imgCards}
-          />
+        <Box p="1rem" rounded={"lg"} height={"240px"}>
+          <Image height={"100%"} m="0 auto" src={imgCards} />
         </Box>
-        <Flex mt={8} align={"center"} flexDirection={"column"} gap={"0.6rem"}>
+        <Flex p="1.4rem" bgColor="#eaeaea" flexDirection={"column"}>
           <Heading
             fontSize={"2xl"}
-            fontWeight={600}
-            as="bold"
+            fontWeight={700}
             color={"black"}
             lineHeight={"25px"}
-            h="4.7rem"
-            fontFamily={("sans-serif", "Rajdhani")}
+            mb="12px"
+            h="3rem"
+            fontFamily="Rajdhani"
             overflow="hidden"
           >
             {title}
           </Heading>
           <Text
+            mb="1.2rem"
             fontSize={"sm"}
             fontFamily={("sans-serif", "Poppins")}
             fontWeight={300}
             color={"black"}
-            lineHeight={"18px"}
-            width="100%"
+            h="40px"
+            // w="260px"
             overflow="hidden"
-            textOverflow="ellipsis"
-            whiteSpace="nowrap"
           >
             {description}
           </Text>
-          <Flex direction={"row"} align={"center"}>
-            <Flex pr={4} align={"center"}>
-              <Text
-                fontWeight={600}
-                fontSize={"2x1"}
-                color={"black"}
-                pr={2}
-                fontFamily={("sans-serif", "Rajdhani")}
-              >
-                Price:
-              </Text>
-              <Text
-                fontWeight={600}
-                fontSize={"2xl"}
-                color={"black"}
-                fontFamily={("sans-serif", "Poppins")}
-              >
-                ${price}
-              </Text>
-            </Flex>
-          </Flex>
-          <Flex gap={4}>
+          <Text
+            mb="1rem"
+            fontWeight={600}
+            fontSize={"2xl"}
+            color={"black"}
+            fontFamily={("sans-serif", "Poppins")}
+          >
+            ${price}
+          </Text>
+          <Flex
+            flexDirection="row-reverse"
+            justifyContent="space-between"
+            align="center"
+          >
+            <Box
+              onClick={() => setState({ ...state, like: !state.like })}
+              cursor="pointer"
+              fontSize="1.7rem"
+            >
+              <Box>
+                <MdFavorite
+                  filter={state.like ? "drop-shadow(4px 3px 7px red)" : null}
+                  color={state.like ? "red" : "gray"}
+                />
+              </Box>
+            </Box>
             <Flex
+              w="fit-content"
               align={"center"}
-              bg={cart ? "#9d0208" : "#252627"}
+              bg={state.cart ? "#10cf10" : "white"}
               gap={2}
               px={4}
               py={1}
+              color={state.cart ? "white" : "black"}
               cursor="pointer"
-              rounded={"lg"}
-              _hover={{
-                bg: "#9d0208",
-                transition: "all 500ms ease",
-                transform: "scale(1.1)",
-              }}
-              onClick={toggleCart}
+              border="1px solid #10cf10"
+              onClick={() => setState({ ...state, cart: !state.cart })}
             >
               <Text
-                color={"white"}
-                fontWeight={600}
-                fontFamily={("sans-serif", "Rajdhani")}
+                fontWeight={textstyle.fontWeight}
+                fontFamily={textstyle.fontFamily}
                 fontSize="1.2rem"
               >
-                {cart ? "ADDED" : "ADD TO"}
+                {state.cart ? "ADDED" : "ADD TO"}
               </Text>
-              {cart ? (
-                <BsFillCartCheckFill color="white" fontSize={"1.4rem"} />
+              {state.cart ? (
+                <BsFillCartCheckFill fontSize={"1.4rem"} />
               ) : (
-                <BsFillCartPlusFill color="white" fontSize={"1.4rem"} />
+                <BsFillCartPlusFill fontSize={"1.4rem"} />
               )}
-            </Flex>
-            <Flex align={"center"}>
-              <Box
-                onClick={subtractClick}
-                bgColor={"#9d0208"}
-                px={"14px"}
-                py={"6px"}
-                fontSize={"16px"}
-                color={"white"}
-                borderTopLeftRadius={"9px"}
-                borderBottomLeftRadius={"9px"}
-                cursor={"pointer"}
-                _hover={{
-                  bg: "#c32f27",
-                  transition: "all 500ms ease",
-                  fontSize: "18px",
-                }}
-              >
-                -
-              </Box>
-              <Text
-                color={"white"}
-                fontWeight={600}
-                fontFamily={("sans-serif", "Rajdhani")}
-                fontSize={"1.3rem"}
-                bg={"#252627"}
-                px={3}
-                py={"2px"}
-              >
-                {count}
-              </Text>
-              <Box
-                onClick={handleClick}
-                bgColor={"#9d0208"}
-                px={"12px"}
-                py={"6px"}
-                fontSize={"16px"}
-                color={"white"}
-                borderTopRightRadius={"9px"}
-                borderBottomRightRadius={"9px"}
-                cursor={"pointer"}
-                _hover={{
-                  bg: "#c32f27",
-                  transition: "all 500ms ease",
-                  fontSize: "18px",
-                }}
-              >
-                +
-              </Box>
             </Flex>
           </Flex>
         </Flex>
@@ -228,5 +120,4 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
     </Box>
   );
 };
-
 export default ContentProduct;
