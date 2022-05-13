@@ -3,7 +3,7 @@ import React from "react";
 import ContentProduct from "../components/contentProduct";
 import { contentCards } from "../data/contentCards";
 
-const ProductCards = () => {
+const ProductCards = ({ DataSearch }) => {
   return (
     <Container p="0" m="0 auto" maxW={"90%"}>
       <Grid
