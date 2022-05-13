@@ -50,7 +50,6 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
               fontWeight={600}
               fontFamily={("sans-serif", "Rajdhani")}
               borderBottomLeftRadius={"5px"}
-              borderBottomRightRadius={"5px"}
             >
               Stock Disponible
             </Text>
@@ -62,7 +61,6 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
               color={"white"}
               fontWeight={600}
               fontFamily={("sans-serif", "Rajdhani")}
-              borderBottomLeftRadius={"5px"}
               borderBottomRightRadius={"5px"}
             >
               Oferta
@@ -78,7 +76,6 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
             ) : (
               <Box
                 _hover={{
-                  transform: "scale(1.13)",
                   transition: "all 1000ms ease",
                 }}
               >
@@ -187,7 +184,6 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
                 _hover={{
                   bg: "#c32f27",
                   transition: "all 500ms ease",
-                  fontSize: "18px",
                 }}
               >
                 -
@@ -216,7 +212,6 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
                 _hover={{
                   bg: "#c32f27",
                   transition: "all 500ms ease",
-                  fontSize: "18px",
                 }}
               >
                 +
