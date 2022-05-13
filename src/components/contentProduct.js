@@ -68,8 +68,10 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
             </Text>
           </Box>
         </Flex>
-        <Flex ml={"14.6rem"} mb={"1rem"} mt={"-2.5rem"}>
+        <Flex>
           <Box
+            ml="auto"
+            mt="-40px"
             onClick={() => setState({ ...state, like: !state.like })}
             cursor={"pointer"}
             fontSize={"1.7rem"}
