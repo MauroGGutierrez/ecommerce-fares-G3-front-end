@@ -20,6 +20,12 @@ import "../styleRgb.css";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [input, setInput] = useState("");
+  const [results, setResults] = useState([]);
+  console.log(input);
+  const handleInput = (e) => {
+    setInput(e.target.value);
+  };
 
   return (
     <Box bgGradient="linear(to-r, #343a40,#1d1f20)" color="black" m="0">
@@ -42,6 +48,8 @@ const NavBar = () => {
             <Flex align={"center"} gap={2}>
               <Input
                 id="search"
+                value={input}
+                onChange={handleInput}
                 type="search"
                 placeholder="Buscar"
                 bg="#252627"
