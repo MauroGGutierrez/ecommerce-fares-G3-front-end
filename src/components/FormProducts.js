@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Button,
   Center,
@@ -11,7 +12,7 @@ import {
   NumberInputStepper,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
+import FormCategory from '../components/FormCategory'
 
 const FormProducts = () => {
   return (
@@ -48,10 +49,10 @@ const FormProducts = () => {
             <NumberDecrementStepper />
           </NumberInputStepper>
         </NumberInput>
-        <FormLabel htmlFor="category" fontWeight="semibold" mt=".4rem">
-          Category
-        </FormLabel>
-        <Input id="category" type="email" placeholder="Product Category" />
+        <Text fontSize="2xl" fontWeight="medium" mb="1rem">
+          From Category
+        </Text>
+        <FormCategory />
         <Button mt={4} colorScheme="teal" type="submit" w="5rem">
           Subir
         </Button>
