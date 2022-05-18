@@ -21,7 +21,8 @@ import "../styleRgb.css";
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [input, setInput] = useState("");
-  const [results, setResults] = useState([]);
+  // const [results, setResults] = useState([]);
+
   console.log(input);
   const handleInput = (e) => {
     setInput(e.target.value);

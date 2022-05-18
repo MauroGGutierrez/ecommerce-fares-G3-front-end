@@ -16,7 +16,7 @@ import { SettingsIcon, InfoIcon } from "@chakra-ui/icons";
 // ];
 export const linksNavbar = [
   { id: 1, link: "/", name: "Home", icon: <FaHome /> },
-  { id: 2, link: "/Productos", name: "Productos", icon: <FaShopify /> },
+  { id: 2, link: "/Products", name: "Productos", icon: <FaShopify /> },
   { id: 3, link: "/contacto", name: "Contactos", icon: <FaPhoneAlt /> },
 ];
 export const buttonsLogin = [
