@@ -7,26 +7,13 @@ import SlideBar from "../components/SlideBar";
 import { GiHamburgerMenu } from "react-icons/gi";
 import LoginButton from "../components/LoginButton";
 import { navbarstyles } from "../components/_styles";
-import {
-  Box,
-  Container,
-  Flex,
-  FormControl,
-  Input,
-  Text,
-} from "@chakra-ui/react";
-import { SearchIcon } from "@chakra-ui/icons";
+import { Box, Container, Flex, Text } from "@chakra-ui/react";
 import "../styleRgb.css";
+import SearchBar from "../components/SearchBar";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [input, setInput] = useState("");
   // const [results, setResults] = useState([]);
-
-  console.log(input);
-  const handleInput = (e) => {
-    setInput(e.target.value);
-  };
 
   return (
     <Box bgGradient="linear(to-r, #343a40,#1d1f20)" color="black" m="0">
@@ -40,43 +27,7 @@ const NavBar = () => {
             <LoginButton />
           </Box>
           <BigLogo />
-          <FormControl
-            w={"27rem"}
-            rounded={"lg"}
-            fontFamily={("sans-serif", "Rajdhani")}
-            fontWeight={"2x1"}
-          >
-            <Flex align={"center"} gap={2}>
-              <Input
-                id="search"
-                value={input}
-                onChange={handleInput}
-                type="search"
-                placeholder="Buscar"
-                bg="#252627"
-                py={2}
-                color="white"
-              />
-              <Box
-                cursor={"pointer"}
-                bg={"#212529"}
-                p={"6px 10px 6px 10px"}
-                rounded={"3xl"}
-                border={"3px solid #6c757d"}
-                _hover={{
-                  transition: "all 200ms ease",
-                  transform: "scale(1.07)",
-                  bg: "#6c757d",
-                }}
-              >
-                <SearchIcon
-                  color={"white"}
-                  fontSize="20px"
-                  fontWeight={"bold"}
-                />
-              </Box>
-            </Flex>
-          </FormControl>
+          <SearchBar />
           <Flex
             d={["none", "none", "flex", "flex"]}
             alignItems="center"

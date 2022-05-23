@@ -3,7 +3,7 @@ import React from "react";
 
 const FilterCategory = () => {
   return (
-    <Box ml={2} mt={8}>
+    <Box ml={5} mt={10} borderRight="3px solid gray" maxH={"40rem"}>
       <Text fontSize={"2xl"} fontWeight={"semibold"} as="i">
         Categorias
       </Text>
