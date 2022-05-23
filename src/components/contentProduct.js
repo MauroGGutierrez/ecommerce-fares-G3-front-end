@@ -5,8 +5,6 @@ import { MdFavorite } from "react-icons/md";
 
 const ContentProduct = ({ title, imgCards, description, price }) => {
   const [count, setCount] = useState(0);
-  // const [like, setLike] = useState(false);
-  // const [cart, setCart] = useState(false);
   const [state, setState] = useState({ like: false, cart: false });
 
   const handleClick = () => {
@@ -16,13 +14,6 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
   const subtractClick = () => {
     setCount(count - 1);
   };
-
-  // const toggleLike = () => {
-  //   setLike(!like);
-  // };
-  // const toggleCart = () => {
-  //   setCart(!cart);
-  // };
 
   return (
     <Box py={12}>
@@ -37,7 +28,7 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
         boxShadow={"dark-lg"}
         transition="all 500ms ease"
         _hover={{
-          transform: "scale(1.04)",
+          transform: "scale(1.03)",
           transition: "all 1000ms ease",
           border: "1px solid red",
         }}
