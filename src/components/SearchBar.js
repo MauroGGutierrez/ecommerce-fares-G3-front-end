@@ -5,19 +5,21 @@ import React from "react";
 const SearchBar = ({ search }) => {
   return (
     <FormControl
-      w={"27rem"}
+      w={"29rem"}
       rounded={"lg"}
       fontFamily={("sans-serif", "Rajdhani")}
       fontWeight={"2x1"}
+      mt={"1rem"}
     >
       <Flex align={"center"} gap={2}>
         <Input
           id="search"
           type="text"
           placeholder="Buscar"
-          bg="#252627"
+          bg="#adb5bd"
           py={2}
-          color="white"
+          color="black"
+          fontWeight={"semibold"}
           onChange={search}
         />
         <Box
