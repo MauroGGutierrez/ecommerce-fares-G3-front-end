@@ -16,13 +16,13 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
   };
 
   return (
-    <Box py={12}>
+    <Box py={10}>
       <Box
         role={"group"}
         p={7}
         maxW={"330px"}
         w={"full"}
-        h={"36.25rem"}
+        h={"35rem"}
         overflow={"hidden"}
         bgGradient="linear(to-t, #adb5bd,#e9ecef)"
         boxShadow={"dark-lg"}

@@ -9,11 +9,10 @@ import LoginButton from "../components/LoginButton";
 import { navbarstyles } from "../components/_styles";
 import { Box, Container, Flex, Text } from "@chakra-ui/react";
 import "../styleRgb.css";
-import SearchBar from "../components/SearchBar";
+// import SearchBar from "../components/SearchBar";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  // const [results, setResults] = useState([]);
 
   return (
     <Box bgGradient="linear(to-r, #343a40,#1d1f20)" color="black" m="0">
@@ -27,7 +26,7 @@ const NavBar = () => {
             <LoginButton />
           </Box>
           <BigLogo />
-          <SearchBar />
+          {/* <SearchBar /> */}
           <Flex
             d={["none", "none", "flex", "flex"]}
             alignItems="center"
