@@ -1,18 +1,27 @@
 import React, { useState } from "react";
-import { Box, Heading, Text, Image, Flex } from "@chakra-ui/react";
+import {
+  Box,
+  Heading,
+  Text,
+  Image,
+  Flex,
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
+} from "@chakra-ui/react";
 import { BsFillCartPlusFill, BsFillCartCheckFill } from "react-icons/bs";
 import { MdFavorite } from "react-icons/md";
 
 const ContentProduct = ({ title, imgCards, description, price }) => {
-  const [count, setCount] = useState(0);
   const [state, setState] = useState({ like: false, cart: false });
-
-  const handleClick = () => {
-    setCount(count + 1);
-  };
-
-  const subtractClick = () => {
-    setCount(count - 1);
+  const textstyle = {
+    padding: "3px 10px",
+    fontWeight: 600,
+    fontFamily: "Rajdhani",
+    borderBottomLeftRadius: "5px",
+    borderBottomRightRadius: "5px",
   };
 
   return (
@@ -95,7 +104,6 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
           <Heading
             fontSize={"2xl"}
             fontWeight={600}
-            as="bold"
             color={"black"}
             lineHeight={"25px"}
             h="4.7rem"
@@ -138,83 +146,41 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
               </Text>
             </Flex>
           </Flex>
-          <Flex gap={4}>
+          <Flex gap={3}>
             <Flex
+              w="fit-content"
               align={"center"}
-              bg={state.cart ? "#9d0208" : "#252627"}
+              bg={state.cart ? "#10cf10" : "white"}
               gap={2}
               px={4}
               py={1}
+              color={state.cart ? "white" : "black"}
               cursor="pointer"
-              rounded={"lg"}
-              _hover={{
-                bg: "#9d0208",
-                transition: "all 500ms ease",
-                transform: "scale(1.1)",
-              }}
+              border="1px solid #10cf10"
               onClick={() => setState({ ...state, cart: !state.cart })}
             >
               <Text
-                color={"white"}
-                fontWeight={600}
-                fontFamily={("sans-serif", "Rajdhani")}
+                fontWeight={textstyle.fontWeight}
+                fontFamily={textstyle.fontFamily}
                 fontSize="1.2rem"
               >
                 {state.cart ? "ADDED" : "ADD TO"}
               </Text>
               {state.cart ? (
-                <BsFillCartCheckFill color="white" fontSize={"1.4rem"} />
+                <BsFillCartCheckFill fontSize={"1.4rem"} />
               ) : (
-                <BsFillCartPlusFill color="white" fontSize={"1.4rem"} />
+                <BsFillCartPlusFill fontSize={"1.4rem"} />
               )}
             </Flex>
-            <Flex align={"center"}>
-              <Box
-                onClick={subtractClick}
-                bgColor={"#9d0208"}
-                px={"14px"}
-                py={"6px"}
-                fontSize={"16px"}
-                color={"white"}
-                borderTopLeftRadius={"9px"}
-                borderBottomLeftRadius={"9px"}
-                cursor={"pointer"}
-                _hover={{
-                  bg: "#c32f27",
-                  transition: "all 500ms ease",
-                }}
-              >
-                -
-              </Box>
-              <Text
-                color={"white"}
-                fontWeight={600}
-                fontFamily={("sans-serif", "Rajdhani")}
-                fontSize={"1.3rem"}
-                bg={"#252627"}
-                px={3}
-                py={"2px"}
-              >
-                {count}
-              </Text>
-              <Box
-                onClick={handleClick}
-                bgColor={"#9d0208"}
-                px={"12px"}
-                py={"6px"}
-                fontSize={"16px"}
-                color={"white"}
-                borderTopRightRadius={"9px"}
-                borderBottomRightRadius={"9px"}
-                cursor={"pointer"}
-                _hover={{
-                  bg: "#c32f27",
-                  transition: "all 500ms ease",
-                }}
-              >
-                +
-              </Box>
-            </Flex>
+            <Box maxW="74px">
+              <NumberInput defaultValue={0} min={0} max={20}>
+                <NumberInputField />
+                <NumberInputStepper>
+                  <NumberIncrementStepper />
+                  <NumberDecrementStepper />
+                </NumberInputStepper>
+              </NumberInput>
+            </Box>
           </Flex>
         </Flex>
       </Box>

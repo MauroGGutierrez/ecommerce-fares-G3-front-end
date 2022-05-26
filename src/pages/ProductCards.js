@@ -15,10 +15,10 @@ const ProductCards = () => {
   return (
     <Flex>
       <FilterCategory />
-      <Container p="0" m="0 auto" maxW={"90%"} mr={2} ml={4}>
+      <Container p="0" m="0 auto" maxW={"90%"}>
         <SearchBar search={handleSearch} />
         <Grid
-          gridTemplateColumns="repeat(auto-fill, minmax(250px,1fr))"
+          gridTemplateColumns="repeat(auto-fill, minmax(260px,1fr))"
           gap="1.4rem"
         >
           {contentCards
