@@ -64,7 +64,7 @@ const NavBar = () => {
           </Box>
         </Flex>
       </Container>
-      <Box padding={"5px"} className="rgb" />
+      <Box padding={"2px"} className="rgb" />
     </Box>
   );
 };

@@ -33,8 +33,7 @@ export const contentCards = [
   },
   {
     id: 5,
-    title:
-      "GABINETE ATX IC3 S17-5 RED 6 COOLERS GAMER NUEVA SUPER IPER MEGA NUEVA NO PUEDE SERRRRRR",
+    title: "GABINETE ATX IC3 S17-5 RED 6 COOLERS GAMER ",
     description:
       "Gabinete gamer con triple Cooler Frontal de iluminación roja y ventana lateral para mantener tus componentes refrigerados y a la vista. El Magnum Tech MT-435R negro con lateral transparente de acrílico, es un gabinete gamer que posee un precio accesible",
     price: "80.000",
