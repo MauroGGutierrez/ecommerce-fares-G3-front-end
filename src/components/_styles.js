@@ -3,7 +3,7 @@ export const navbarstyles = {
     display: "flex",
     alignItems: "center",
     fontWeight: "500",
-    fontSize: "17px",
+    fontSize: "16px",
   },
   hover: {
     fontWeight: "bold",

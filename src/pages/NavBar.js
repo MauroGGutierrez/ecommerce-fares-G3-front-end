@@ -38,7 +38,6 @@ const NavBar = () => {
                   color={"#adb5bd"}
                   style={navbarstyles.navbarLink}
                   gap="4px"
-                  as="i"
                   _hover={{
                     transition: "all 400ms ease",
                     transform: "scale(1.1)",

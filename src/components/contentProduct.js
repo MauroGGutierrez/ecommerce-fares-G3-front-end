@@ -1,18 +1,8 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Heading,
-  Text,
-  Image,
-  Flex,
-  NumberInput,
-  NumberInputField,
-  NumberInputStepper,
-  NumberIncrementStepper,
-  NumberDecrementStepper,
-} from "@chakra-ui/react";
+import { Box, Heading, Text, Image, Flex } from "@chakra-ui/react";
 import { BsFillCartPlusFill, BsFillCartCheckFill } from "react-icons/bs";
 import { MdFavorite } from "react-icons/md";
+import Counter from "./Counter";
 
 const ContentProduct = ({ title, imgCards, description, price }) => {
   const [state, setState] = useState({ like: false, cart: false });
@@ -25,14 +15,11 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
   };
 
   return (
-    <Box py={10}>
+    <Box>
       <Box
         role={"group"}
         p={7}
-        maxW={"330px"}
-        w={"full"}
-        h={"35rem"}
-        overflow={"hidden"}
+        m="0 auto"
         bgGradient="linear(to-t, #adb5bd,#e9ecef)"
         boxShadow={"dark-lg"}
         transition="all 500ms ease"
@@ -91,33 +78,31 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
             )}
           </Box>
         </Flex>
-        <Box rounded={"lg"} height={"260px"} boxShadow={"2xl"}>
+        <Box h="160px">
           <Image
-            rounded={"lg"}
             height={"100%"}
             width={"100%"}
-            objectFit={"cover"}
+            objectFit={"contain"}
             src={imgCards}
           />
         </Box>
-        <Flex mt={8} align={"center"} flexDirection={"column"} gap={"0.6rem"}>
+        <Flex mt={8} align={"center"} flexDirection={"column"} gap={"1rem"}>
           <Heading
-            fontSize={"2xl"}
+            fontSize="1.6rem"
             fontWeight={600}
             color={"black"}
             lineHeight={"25px"}
-            h="4.7rem"
+            h="50px"
             fontFamily={("sans-serif", "Rajdhani")}
             overflow="hidden"
           >
             {title}
           </Heading>
           <Text
-            fontSize={"sm"}
             fontFamily={("sans-serif", "Poppins")}
-            fontWeight={300}
+            fontWeight={100}
+            fontSize="0.9rem"
             color={"black"}
-            lineHeight={"18px"}
             width="100%"
             overflow="hidden"
             textOverflow="ellipsis"
@@ -126,19 +111,18 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
             {description}
           </Text>
           <Flex direction={"row"} align={"center"}>
-            <Flex pr={4} align={"center"}>
+            <Flex gap={3} align={"center"}>
               <Text
                 fontWeight={600}
-                fontSize={"2x1"}
+                fontSize="17px"
                 color={"black"}
-                pr={2}
                 fontFamily={("sans-serif", "Rajdhani")}
               >
                 Price:
               </Text>
               <Text
+                fontSize="19px"
                 fontWeight={600}
-                fontSize={"2xl"}
                 color={"black"}
                 fontFamily={("sans-serif", "Poppins")}
               >
@@ -146,7 +130,7 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
               </Text>
             </Flex>
           </Flex>
-          <Flex gap={3}>
+          <Flex w="100%" justifyContent="space-between">
             <Flex
               w="fit-content"
               align={"center"}
@@ -173,13 +157,7 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
               )}
             </Flex>
             <Box maxW="74px">
-              <NumberInput defaultValue={0} min={0} max={20}>
-                <NumberInputField />
-                <NumberInputStepper>
-                  <NumberIncrementStepper />
-                  <NumberDecrementStepper />
-                </NumberInputStepper>
-              </NumberInput>
+              <Counter />
             </Box>
           </Flex>
         </Flex>

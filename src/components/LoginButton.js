@@ -17,7 +17,7 @@ const LoginButton = () => {
         }}
         cursor="pointer"
         color="#fff"
-        p="8px 10px 7px"
+        p="6px"
         bgColor="#d00000"
         fontWeight="500"
         border="none"
