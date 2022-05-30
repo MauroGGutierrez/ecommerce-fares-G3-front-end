@@ -16,7 +16,8 @@ const AppRoutes = () => {
         <Route path="/products" element={<ProductCards />} />
         <Route path="/createProduct" element={<CreateProduct />} />
         <Route path="/productsCatalog" element={<ProductsCatalog />} />
-        <Route path="/productDetails/:id" element={<ProductDetails />} />
+        {/* <Route path="/productDetails/:id" element={<ProductDetails />} /> */}
+        <Route path="/productDetails" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />
         {/* usar useParams en el componente */}
       </Routes>

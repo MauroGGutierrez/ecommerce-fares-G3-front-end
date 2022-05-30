@@ -39,4 +39,108 @@ export const contentCards = [
     price: "80.000",
     IMG: "https://imagenes.compufull.com/thumb/im_0_0_0_700x700_11548_1/GABINETE_GAMER_IC3_S175_RED_VIDRIO_LATERAL_6_COOLERS_LED20210218101958.jpg",
   },
+  {
+    id: 6,
+    title: "GABINETE ATX IC3 S17-5 RED 6 COOLERS GAMER ",
+    description:
+      "Gabinete gamer con triple Cooler Frontal de iluminación roja y ventana lateral para mantener tus componentes refrigerados y a la vista. El Magnum Tech MT-435R negro con lateral transparente de acrílico, es un gabinete gamer que posee un precio accesible",
+    price: "80.000",
+    IMG: "https://imagenes.compufull.com/thumb/im_0_0_0_700x700_11548_1/GABINETE_GAMER_IC3_S175_RED_VIDRIO_LATERAL_6_COOLERS_LED20210218101958.jpg",
+  },
+  // {
+  //   id: 7,
+  //   title: "GABINETE ATX IC3 S17-5 RED 6 COOLERS GAMER ",
+  //   description:
+  //     "Gabinete gamer con triple Cooler Frontal de iluminación roja y ventana lateral para mantener tus componentes refrigerados y a la vista. El Magnum Tech MT-435R negro con lateral transparente de acrílico, es un gabinete gamer que posee un precio accesible",
+  //   price: "80.000",
+  //   IMG: "https://imagenes.compufull.com/thumb/im_0_0_0_700x700_11548_1/GABINETE_GAMER_IC3_S175_RED_VIDRIO_LATERAL_6_COOLERS_LED20210218101958.jpg",
+  // },
+  // {
+  //   id: 8,
+  //   title: "GABINETE ATX IC3 S17-5 RED 6 COOLERS GAMER ",
+  //   description:
+  //     "Gabinete gamer con triple Cooler Frontal de iluminación roja y ventana lateral para mantener tus componentes refrigerados y a la vista. El Magnum Tech MT-435R negro con lateral transparente de acrílico, es un gabinete gamer que posee un precio accesible",
+  //   price: "80.000",
+  //   IMG: "https://imagenes.compufull.com/thumb/im_0_0_0_700x700_11548_1/GABINETE_GAMER_IC3_S175_RED_VIDRIO_LATERAL_6_COOLERS_LED20210218101958.jpg",
+  // },
+  // {
+  //   id: 9,
+  //   title: "GABINETE ATX IC3 S17-5 RED 6 COOLERS GAMER ",
+  //   description:
+  //     "Gabinete gamer con triple Cooler Frontal de iluminación roja y ventana lateral para mantener tus componentes refrigerados y a la vista. El Magnum Tech MT-435R negro con lateral transparente de acrílico, es un gabinete gamer que posee un precio accesible",
+  //   price: "80.000",
+  //   IMG: "https://imagenes.compufull.com/thumb/im_0_0_0_700x700_11548_1/GABINETE_GAMER_IC3_S175_RED_VIDRIO_LATERAL_6_COOLERS_LED20210218101958.jpg",
+  // },
+  // {
+  //   id: 10,
+  //   title: "GABINETE ATX IC3 S17-5 RED 6 COOLERS GAMER ",
+  //   description:
+  //     "Gabinete gamer con triple Cooler Frontal de iluminación roja y ventana lateral para mantener tus componentes refrigerados y a la vista. El Magnum Tech MT-435R negro con lateral transparente de acrílico, es un gabinete gamer que posee un precio accesible",
+  //   price: "80.000",
+  //   IMG: "https://imagenes.compufull.com/thumb/im_0_0_0_700x700_11548_1/GABINETE_GAMER_IC3_S175_RED_VIDRIO_LATERAL_6_COOLERS_LED20210218101958.jpg",
+  // },
+  // {
+  //   id: 11,
+  //   title: "GABINETE ATX IC3 S17-5 RED 6 COOLERS GAMER ",
+  //   description:
+  //     "Gabinete gamer con triple Cooler Frontal de iluminación roja y ventana lateral para mantener tus componentes refrigerados y a la vista. El Magnum Tech MT-435R negro con lateral transparente de acrílico, es un gabinete gamer que posee un precio accesible",
+  //   price: "80.000",
+  //   IMG: "https://imagenes.compufull.com/thumb/im_0_0_0_700x700_11548_1/GABINETE_GAMER_IC3_S175_RED_VIDRIO_LATERAL_6_COOLERS_LED20210218101958.jpg",
+  // },
+  // {
+  //   id: 12,
+  //   title: "GABINETE ATX IC3 S17-5 RED 6 COOLERS GAMER ",
+  //   description:
+  //     "Gabinete gamer con triple Cooler Frontal de iluminación roja y ventana lateral para mantener tus componentes refrigerados y a la vista. El Magnum Tech MT-435R negro con lateral transparente de acrílico, es un gabinete gamer que posee un precio accesible",
+  //   price: "80.000",
+  //   IMG: "https://imagenes.compufull.com/thumb/im_0_0_0_700x700_11548_1/GABINETE_GAMER_IC3_S175_RED_VIDRIO_LATERAL_6_COOLERS_LED20210218101958.jpg",
+  // },
+  // {
+  //   id: 13,
+  //   title: "GABINETE ATX IC3 S17-5 RED 6 COOLERS GAMER ",
+  //   description:
+  //     "Gabinete gamer con triple Cooler Frontal de iluminación roja y ventana lateral para mantener tus componentes refrigerados y a la vista. El Magnum Tech MT-435R negro con lateral transparente de acrílico, es un gabinete gamer que posee un precio accesible",
+  //   price: "80.000",
+  //   IMG: "https://imagenes.compufull.com/thumb/im_0_0_0_700x700_11548_1/GABINETE_GAMER_IC3_S175_RED_VIDRIO_LATERAL_6_COOLERS_LED20210218101958.jpg",
+  // },
+  // {
+  //   id: 14,
+  //   title: "GABINETE ATX IC3 S17-5 RED 6 COOLERS GAMER ",
+  //   description:
+  //     "Gabinete gamer con triple Cooler Frontal de iluminación roja y ventana lateral para mantener tus componentes refrigerados y a la vista. El Magnum Tech MT-435R negro con lateral transparente de acrílico, es un gabinete gamer que posee un precio accesible",
+  //   price: "80.000",
+  //   IMG: "https://imagenes.compufull.com/thumb/im_0_0_0_700x700_11548_1/GABINETE_GAMER_IC3_S175_RED_VIDRIO_LATERAL_6_COOLERS_LED20210218101958.jpg",
+  // },
+  // {
+  //   id: 15,
+  //   title: "GABINETE ATX IC3 S17-5 RED 6 COOLERS GAMER ",
+  //   description:
+  //     "Gabinete gamer con triple Cooler Frontal de iluminación roja y ventana lateral para mantener tus componentes refrigerados y a la vista. El Magnum Tech MT-435R negro con lateral transparente de acrílico, es un gabinete gamer que posee un precio accesible",
+  //   price: "80.000",
+  //   IMG: "https://imagenes.compufull.com/thumb/im_0_0_0_700x700_11548_1/GABINETE_GAMER_IC3_S175_RED_VIDRIO_LATERAL_6_COOLERS_LED20210218101958.jpg",
+  // },
+  // {
+  //   id: 16,
+  //   title: "GABINETE ATX IC3 S17-5 RED 6 COOLERS GAMER ",
+  //   description:
+  //     "Gabinete gamer con triple Cooler Frontal de iluminación roja y ventana lateral para mantener tus componentes refrigerados y a la vista. El Magnum Tech MT-435R negro con lateral transparente de acrílico, es un gabinete gamer que posee un precio accesible",
+  //   price: "80.000",
+  //   IMG: "https://imagenes.compufull.com/thumb/im_0_0_0_700x700_11548_1/GABINETE_GAMER_IC3_S175_RED_VIDRIO_LATERAL_6_COOLERS_LED20210218101958.jpg",
+  // },
+  // {
+  //   id: 17,
+  //   title: "GABINETE ATX IC3 S17-5 RED 6 COOLERS GAMER ",
+  //   description:
+  //     "Gabinete gamer con triple Cooler Frontal de iluminación roja y ventana lateral para mantener tus componentes refrigerados y a la vista. El Magnum Tech MT-435R negro con lateral transparente de acrílico, es un gabinete gamer que posee un precio accesible",
+  //   price: "80.000",
+  //   IMG: "https://imagenes.compufull.com/thumb/im_0_0_0_700x700_11548_1/GABINETE_GAMER_IC3_S175_RED_VIDRIO_LATERAL_6_COOLERS_LED20210218101958.jpg",
+  // },
+  // {
+  //   id: 18,
+  //   title: "GABINETE ATX IC3 S17-5 RED 6 COOLERS GAMER ",
+  //   description:
+  //     "Gabinete gamer con triple Cooler Frontal de iluminación roja y ventana lateral para mantener tus componentes refrigerados y a la vista. El Magnum Tech MT-435R negro con lateral transparente de acrílico, es un gabinete gamer que posee un precio accesible",
+  //   price: "80.000",
+  //   IMG: "https://imagenes.compufull.com/thumb/im_0_0_0_700x700_11548_1/GABINETE_GAMER_IC3_S175_RED_VIDRIO_LATERAL_6_COOLERS_LED20210218101958.jpg",
+  // },
 ];
