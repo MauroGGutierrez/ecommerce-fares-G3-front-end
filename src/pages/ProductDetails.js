@@ -29,40 +29,55 @@ const ProductDetails = () => {
         p={["1rem", "1.5rem 2rem", "1.5rem 2rem", "2rem 3rem"]}
       >
         <Flex
-          direction={["column-reverse", "column-reverse", "row", "row"]}
+          direction={[
+            "column-reverse",
+            "column-reverse",
+            "row-reverse",
+            "row-reverse",
+          ]}
           gap="3rem"
         >
           <Flex
-            // justifyContent="space-between"
+            justifyContent="space-between"
             flexDirection="column"
-            //gap="1.5rem"
+            gap={["1rem", "1rem", "0px", "0px"]}
             w="fit-content"
           >
             <Heading>Gabinete</Heading>
-            <Text>Price: $100.000</Text>
-            <Text maxH="125px" overflow="auto">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum, odio molestias error perferendis in cum deserunt!
-              Ratione laborum qui ex consequuntur blanditiis mollitia, non eius
-              fuga rem exercitationem repudiandae impedit distinctio
-              necessitatibus quo aut consectetur corporis nihil iusto eveniet
-              quibusdam quaerat delectus obcaecati inventore hic. Eaque,
-              architecto veritatis. Natus, distinctio!
-            </Text>
-            <Flex gap="2rem" align="center">
+            <Flex
+              alignItems="center"
+              alignSelf="self-start"
+              gap="1.5rem"
+              flexDirection={[
+                "column",
+                "row-reverse",
+                "row-reverse",
+                "row-reverse",
+              ]}
+            >
+              <Text>$100.000</Text>
               <Box maxW="75px">
                 <Counter />
               </Box>
+            </Flex>
+            <Flex
+              flexDirection={["column", "unset", "unset", "unset"]}
+              gap="1rem"
+              align={["flex-start", "center", "center", "center"]}
+            >
               <Flex
+                w={["100%", "unset", "unset", "unset"]}
+                justifyContent={["center", "unset", "unset", "unset"]}
+                cursor={"pointer"}
                 onClick={() => setState({ ...state, like: !state.like })}
-                p="0 1rem"
+                p="6px 1rem"
                 borderRadius="5px"
                 gap="0.4rem"
                 border="1px solid red"
-                h="100%"
+                h="fit-content"
                 align="center"
               >
-                <Box cursor={"pointer"} fontSize={"1.1rem"}>
+                <Box fontSize={"1.1rem"}>
                   {state.like ? (
                     <Box transition="all 1000ms ease">
                       <MdFavorite color={"red"} />
@@ -79,32 +94,46 @@ const ProductDetails = () => {
                 </Box>
                 <Text fontWeight={600}>Favorito</Text>
               </Flex>
-            </Flex>
-            <Flex
-              w="fit-content"
-              align={"center"}
-              bg={state.cart ? "#10cf10" : "white"}
-              gap={2}
-              px={8}
-              py={1}
-              color={state.cart ? "white" : "black"}
-              cursor="pointer"
-              border="1px solid #10cf10"
-              onClick={() => setState({ ...state, cart: !state.cart })}
-            >
-              <Text
-                fontWeight={textstyle.fontWeight}
-                fontFamily={textstyle.fontFamily}
-                fontSize="1.2rem"
+              <Flex
+                w={["100%", "fit-content", "fit-content", "fit-content"]}
+                justifyContent={["center", "unset", "unset", "unset"]}
+                align={"center"}
+                bg={state.cart ? "#10cf10" : "white"}
+                gap={2}
+                p="4px 1rem"
+                color={state.cart ? "white" : "black"}
+                cursor="pointer"
+                border="1px solid #10cf10"
+                onClick={() => setState({ ...state, cart: !state.cart })}
               >
-                {state.cart ? "ADDED" : "ADD TO"}
-              </Text>
-              {state.cart ? (
-                <BsFillCartCheckFill fontSize={"1.4rem"} />
-              ) : (
-                <BsFillCartPlusFill fontSize={"1.4rem"} />
-              )}
+                <Text
+                  fontWeight={textstyle.fontWeight}
+                  fontFamily={textstyle.fontFamily}
+                  fontSize="1.2rem"
+                >
+                  {state.cart ? "ADDED" : "ADD TO"}
+                </Text>
+                {state.cart ? (
+                  <BsFillCartCheckFill fontSize={"1.4rem"} />
+                ) : (
+                  <BsFillCartPlusFill fontSize={"1.4rem"} />
+                )}
+              </Flex>
             </Flex>
+            <Box>
+              <Text fontWeight={600} mb="10px">
+                Product Details
+              </Text>
+              <Text maxH="125px" overflow="auto">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatum, odio molestias error perferendis in cum deserunt!
+                Ratione laborum qui ex consequuntur blanditiis mollitia, non
+                eius fuga rem exercitationem repudiandae impedit distinctio
+                necessitatibus quo aut consectetur corporis nihil iusto eveniet
+                quibusdam quaerat delectus obcaecati inventore hic. Eaque,
+                architecto veritatis. Natus, distinctio!
+              </Text>
+            </Box>
           </Flex>
           <Box m="0 auto" maxW="360px">
             <Image

@@ -25,7 +25,7 @@ const ProductCards = () => {
       <Box
         maxW={["90%", "90%", "unset", "unset"]}
         m={["2rem auto 0", "2rem auto 0", "0px", "0px"]}
-        p={["0px", "0px", "3rem", "3rem"]}
+        p={["0px 16px", "0px 16px", "2.9rem", "2.9rem"]}
       >
         <Box mb="2rem">
           <SearchBar search={debouncedSearch} />
