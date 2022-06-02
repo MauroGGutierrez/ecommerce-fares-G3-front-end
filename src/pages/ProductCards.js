@@ -1,5 +1,6 @@
 import { Container, Flex, Grid } from "@chakra-ui/react";
 import React, { useState } from "react";
+import { connect } from "react-redux";
 import debounce from "lodash.debounce";
 import ContentProduct from "../components/contentProduct";
 import SearchBar from "../components/SearchBar";
