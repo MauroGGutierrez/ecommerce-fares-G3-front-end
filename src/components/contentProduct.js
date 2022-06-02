@@ -2,28 +2,24 @@ import React, { useState } from "react";
 import { Box, Heading, Text, Image, Flex } from "@chakra-ui/react";
 import { BsFillCartPlusFill, BsFillCartCheckFill } from "react-icons/bs";
 import { MdFavorite } from "react-icons/md";
+import Counter from "./Counter";
 
 const ContentProduct = ({ title, imgCards, description, price }) => {
-  const [count, setCount] = useState(0);
   const [state, setState] = useState({ like: false, cart: false });
-
-  const handleClick = () => {
-    setCount(count + 1);
-  };
-
-  const subtractClick = () => {
-    setCount(count - 1);
+  const textstyle = {
+    padding: "3px 10px",
+    fontWeight: 600,
+    fontFamily: "Rajdhani",
+    borderBottomLeftRadius: "5px",
+    borderBottomRightRadius: "5px",
   };
 
   return (
-    <Box py={10}>
+    <Box>
       <Box
         role={"group"}
         p={7}
-        maxW={"330px"}
-        w={"full"}
-        h={"35rem"}
-        overflow={"hidden"}
+        m="0 auto"
         bgGradient="linear(to-t, #adb5bd,#e9ecef)"
         boxShadow={"dark-lg"}
         transition="all 500ms ease"
@@ -82,34 +78,31 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
             )}
           </Box>
         </Flex>
-        <Box rounded={"lg"} height={"260px"} boxShadow={"2xl"}>
+        <Box h="160px">
           <Image
-            rounded={"lg"}
             height={"100%"}
             width={"100%"}
-            objectFit={"cover"}
+            objectFit={"contain"}
             src={imgCards}
           />
         </Box>
-        <Flex mt={8} align={"center"} flexDirection={"column"} gap={"0.6rem"}>
+        <Flex mt={8} align={"center"} flexDirection={"column"} gap={"1rem"}>
           <Heading
-            fontSize={"2xl"}
+            fontSize="1.6rem"
             fontWeight={600}
-            as="bold"
             color={"black"}
             lineHeight={"25px"}
-            h="4.7rem"
+            h="50px"
             fontFamily={("sans-serif", "Rajdhani")}
             overflow="hidden"
           >
             {title}
           </Heading>
           <Text
-            fontSize={"sm"}
             fontFamily={("sans-serif", "Poppins")}
-            fontWeight={300}
+            fontWeight={100}
+            fontSize="0.9rem"
             color={"black"}
-            lineHeight={"18px"}
             width="100%"
             overflow="hidden"
             textOverflow="ellipsis"
@@ -118,19 +111,18 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
             {description}
           </Text>
           <Flex direction={"row"} align={"center"}>
-            <Flex pr={4} align={"center"}>
+            <Flex gap={3} align={"center"}>
               <Text
                 fontWeight={600}
-                fontSize={"2x1"}
+                fontSize="17px"
                 color={"black"}
-                pr={2}
                 fontFamily={("sans-serif", "Rajdhani")}
               >
                 Price:
               </Text>
               <Text
+                fontSize="19px"
                 fontWeight={600}
-                fontSize={"2xl"}
                 color={"black"}
                 fontFamily={("sans-serif", "Poppins")}
               >
@@ -138,83 +130,35 @@ const ContentProduct = ({ title, imgCards, description, price }) => {
               </Text>
             </Flex>
           </Flex>
-          <Flex gap={4}>
+          <Flex w="100%" justifyContent="space-between">
             <Flex
+              w="fit-content"
               align={"center"}
-              bg={state.cart ? "#9d0208" : "#252627"}
+              bg={state.cart ? "#10cf10" : "white"}
               gap={2}
               px={4}
               py={1}
+              color={state.cart ? "white" : "black"}
               cursor="pointer"
-              rounded={"lg"}
-              _hover={{
-                bg: "#9d0208",
-                transition: "all 500ms ease",
-                transform: "scale(1.1)",
-              }}
+              border="1px solid #10cf10"
               onClick={() => setState({ ...state, cart: !state.cart })}
             >
               <Text
-                color={"white"}
-                fontWeight={600}
-                fontFamily={("sans-serif", "Rajdhani")}
+                fontWeight={textstyle.fontWeight}
+                fontFamily={textstyle.fontFamily}
                 fontSize="1.2rem"
               >
                 {state.cart ? "ADDED" : "ADD TO"}
               </Text>
               {state.cart ? (
-                <BsFillCartCheckFill color="white" fontSize={"1.4rem"} />
+                <BsFillCartCheckFill fontSize={"1.4rem"} />
               ) : (
-                <BsFillCartPlusFill color="white" fontSize={"1.4rem"} />
+                <BsFillCartPlusFill fontSize={"1.4rem"} />
               )}
             </Flex>
-            <Flex align={"center"}>
-              <Box
-                onClick={subtractClick}
-                bgColor={"#9d0208"}
-                px={"14px"}
-                py={"6px"}
-                fontSize={"16px"}
-                color={"white"}
-                borderTopLeftRadius={"9px"}
-                borderBottomLeftRadius={"9px"}
-                cursor={"pointer"}
-                _hover={{
-                  bg: "#c32f27",
-                  transition: "all 500ms ease",
-                }}
-              >
-                -
-              </Box>
-              <Text
-                color={"white"}
-                fontWeight={600}
-                fontFamily={("sans-serif", "Rajdhani")}
-                fontSize={"1.3rem"}
-                bg={"#252627"}
-                px={3}
-                py={"2px"}
-              >
-                {count}
-              </Text>
-              <Box
-                onClick={handleClick}
-                bgColor={"#9d0208"}
-                px={"12px"}
-                py={"6px"}
-                fontSize={"16px"}
-                color={"white"}
-                borderTopRightRadius={"9px"}
-                borderBottomRightRadius={"9px"}
-                cursor={"pointer"}
-                _hover={{
-                  bg: "#c32f27",
-                  transition: "all 500ms ease",
-                }}
-              >
-                +
-              </Box>
-            </Flex>
+            <Box maxW="74px">
+              <Counter />
+            </Box>
           </Flex>
         </Flex>
       </Box>

@@ -5,11 +5,10 @@ import { Box, Flex, FormControl, Input } from "@chakra-ui/react";
 const SearchBar = ({ search }) => {
   return (
     <FormControl
-      w={"29rem"}
       rounded={"lg"}
       fontFamily={("sans-serif", "Rajdhani")}
       fontWeight={"2x1"}
-      mt={"1rem"}
+      w="70%"
     >
       <Flex align={"center"} gap={2}>
         <Input
@@ -22,7 +21,7 @@ const SearchBar = ({ search }) => {
           fontWeight={"semibold"}
           onChange={search}
         />
-        <Box
+        {/* <Box
           cursor={"pointer"}
           bg={"#212529"}
           p={"6px 10px 6px 10px"}
@@ -35,7 +34,7 @@ const SearchBar = ({ search }) => {
           }}
         >
           <SearchIcon color={"white"} fontSize="20px" fontWeight={"bold"} />
-        </Box>
+        </Box> */}
       </Flex>
     </FormControl>
   );
